@@ -189,6 +189,7 @@ footer {
     justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .modal .gallery img {
@@ -198,11 +199,12 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: border 0.2s;
+    transition: border 0.2s, transform 0.2s;
 }
 
 .modal .gallery img:hover {
     border: 2px solid var(--verde-fuerte);
+    transform: scale(1.05);
 }
 
 .modal .close {
