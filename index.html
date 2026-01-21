@@ -51,7 +51,7 @@
 <div class="content">
 <h3>Villa Moderna</h3>
 <p>Diseño contemporáneo con jardín privado.</p>
-<p class="price">$450,000</p>
+<p class="price">€450,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('villa-moderna')">Ver propiedad</a>
 </div>
 </div>
@@ -62,7 +62,7 @@
 <div class="content">
 <h3>Residencia Elegante</h3>
 <p>Acabados de lujo en zona exclusiva.</p>
-<p class="price">$620,000</p>
+<p class="price">€620,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('residencia-elegante')">Ver propiedad</a>
 </div>
 </div>
@@ -73,7 +73,7 @@
 <div class="content">
 <h3>Casa de Lujo</h3>
 <p>Piscina y vistas panorámicas.</p>
-<p class="price">$890,000</p>
+<p class="price">€890,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('casa-de-lujo')">Ver propiedad</a>
 </div>
 </div>
@@ -84,7 +84,7 @@
 <div class="content">
 <h3>Casa Rústica</h3>
 <p>Encanto tradicional con jardín amplio.</p>
-<p class="price">$380,000</p>
+<p class="price">€380,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('casa-rustica')">Ver propiedad</a>
 </div>
 </div>
@@ -95,7 +95,7 @@
 <div class="content">
 <h3>Penthouse Moderno</h3>
 <p>Vistas increíbles y diseño minimalista.</p>
-<p class="price">$780,000</p>
+<p class="price">€780,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('penthouse-moderno')">Ver propiedad</a>
 </div>
 </div>
@@ -106,7 +106,7 @@
 <div class="content">
 <h3>Loft Urbano</h3>
 <p>Estilo moderno en el corazón de la ciudad.</p>
-<p class="price">$420,000</p>
+<p class="price">€420,000</p>
 <a href="javascript:void(0)" class="btn" onclick="openModal('loft-urbano')">Ver propiedad</a>
 </div>
 </div>
@@ -143,14 +143,18 @@ con un servicio profesional y personalizado.
 <p>&copy; 2026 CASANUOVA PEDRALBES</p>
 </footer>
 
-<!-- MODALES SIMPLES CON IMAGEN PEQUEÑA -->
+<!-- MODALES CON MINIATURAS -->
 
 <!-- Villa Moderna -->
 <div id="villa-moderna" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('villa-moderna')">&times;</span>
 <h2>Villa Moderna</h2>
-<img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" class="main-img" alt="Villa Moderna">
+<img id="villa-main" class="main-img" src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="Villa Moderna">
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" onclick="changeMain('villa-main', this.src)">
+<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" onclick="changeMain('villa-main', this.src)">
+</div>
 <p>Diseño contemporáneo con jardín privado, piscina y garaje.</p>
 <ul>
 <li>3 habitaciones</li>
@@ -162,7 +166,27 @@ con un servicio profesional y personalizado.
 </div>
 </div>
 
-<!-- Residencia Elegante -->
+<!-- Penthouse Moderno -->
+<div id="penthouse-moderno" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('penthouse-moderno')">&times;</span>
+<h2>Penthouse Moderno</h2>
+<img id="penthouse-main" class="main-img" src="https://images.unsplash.com/photo-1618221276097-3eb0d3bdb24b" alt="Penthouse Moderno">
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1618221276097-3eb0d3bdb24b" onclick="changeMain('penthouse-main', this.src)">
+<img src="https://images.unsplash.com/photo-1580584125789-118c3a0b1713" onclick="changeMain('penthouse-main', this.src)">
+</div>
+<p>Terraza panorámica con diseño minimalista y parking privado.</p>
+<ul>
+<li>3 habitaciones</li>
+<li>2 baños</li>
+<li>220m²</li>
+</ul>
+</div>
+</div>
+
+<!-- Resto de modales (Residencia Elegante, Casa de Lujo, Casa Rústica, Loft Urbano) -->
+<!-- Mantener igual que antes, sin imágenes gigantes -->
 <div id="residencia-elegante" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('residencia-elegante')">&times;</span>
@@ -177,7 +201,6 @@ con un servicio profesional y personalizado.
 </div>
 </div>
 
-<!-- Casa de Lujo -->
 <div id="casa-de-lujo" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('casa-de-lujo')">&times;</span>
@@ -192,7 +215,6 @@ con un servicio profesional y personalizado.
 </div>
 </div>
 
-<!-- Casa Rústica -->
 <div id="casa-rustica" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('casa-rustica')">&times;</span>
@@ -207,22 +229,6 @@ con un servicio profesional y personalizado.
 </div>
 </div>
 
-<!-- Penthouse Moderno -->
-<div id="penthouse-moderno" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('penthouse-moderno')">&times;</span>
-<h2>Penthouse Moderno</h2>
-<img src="https://images.unsplash.com/photo-1618221276097-3eb0d3bdb24b" class="main-img" alt="Penthouse Moderno">
-<p>Terraza panorámica con diseño minimalista y parking privado.</p>
-<ul>
-<li>3 habitaciones</li>
-<li>2 baños</li>
-<li>220m²</li>
-</ul>
-</div>
-</div>
-
-<!-- Loft Urbano -->
 <div id="loft-urbano" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('loft-urbano')">&times;</span>
