@@ -18,6 +18,7 @@ body {
     color: #333;
 }
 
+/* HEADER */
 header {
     background-color: var(--verde-fuerte);
     padding: 20px;
@@ -44,6 +45,7 @@ nav a:hover {
     color: var(--dorado);
 }
 
+/* HERO */
 .hero {
     background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
     background-size: cover;
@@ -62,6 +64,7 @@ nav a:hover {
     border-radius: 8px;
 }
 
+/* SECTIONS */
 section {
     padding: 50px 10%;
 }
@@ -72,6 +75,13 @@ section {
     margin-bottom: 30px;
 }
 
+.about-text {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/* PROPIEDADES */
 .properties {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -86,8 +96,7 @@ section {
     max-width: 260px;
     margin: auto;
     cursor: pointer;
-    transition: transform 0.3s, max-height 0.5s;
-    max-height: 230px;
+    transition: transform 0.3s;
 }
 
 .property-card img {
@@ -112,19 +121,6 @@ section {
     font-size: 0.95rem;
 }
 
-.about-text {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-}
-
-footer {
-    background-color: var(--verde-oliva);
-    color: var(--blanco);
-    text-align: center;
-    padding: 25px 10px;
-}
-
 .btn {
     display: inline-block;
     margin-top: 10px;
@@ -139,6 +135,14 @@ footer {
 
 .btn:hover {
     background-color: #b8962e;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px 10px;
 }
 
 /* MODALES */
@@ -183,7 +187,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Miniaturas dentro del modal */
+/* MINIATURAS */
 .modal .gallery {
     display: flex;
     justify-content: center;
@@ -202,11 +206,18 @@ footer {
     transition: border 0.2s, transform 0.2s;
 }
 
+/* Hover miniaturas */
 .modal .gallery img:hover {
     border: 2px solid var(--verde-fuerte);
     transform: scale(1.05);
 }
 
+/* Imagen activa */
+.modal .gallery img.active {
+    border: 2px solid var(--dorado);
+}
+
+/* Cerrar modal */
 .modal .close {
     float: right;
     font-size: 1.5rem;
