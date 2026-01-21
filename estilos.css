@@ -179,50 +179,13 @@ footer {
     to {transform: translateY(0); opacity: 1;}
 }
 
+/* Imagen principal en modal - tamaño normal */
 .modal .main-img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: 300px; /* mantiene la altura moderada */
+    object-fit: contain; /* ajusta la imagen sin deformar */
     border-radius: 6px;
     margin-bottom: 10px;
-}
-
-/* MINIATURAS */
-.modal .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-}
-
-.modal .gallery img {
-    width: 70px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border 0.2s, transform 0.2s;
-}
-
-/* Hover miniaturas */
-.modal .gallery img:hover {
-    border: 2px solid var(--verde-fuerte);
-    transform: scale(1.05);
-}
-
-/* Imagen activa */
-.modal .gallery img.active {
-    border: 2px solid var(--dorado);
-}
-
-/* Cerrar modal */
-.modal .close {
-    float: right;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 /* RESPONSIVE */
@@ -241,10 +204,5 @@ footer {
         width: 90%;
         margin: 10% auto;
         padding: 15px;
-    }
-
-    .modal .gallery img {
-        width: 50px;
-        height: 40px;
     }
 }
