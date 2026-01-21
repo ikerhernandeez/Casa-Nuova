@@ -14,6 +14,10 @@
     }
     function changeMain(mainId, src) {
         document.getElementById(mainId).src = src;
+        // marcar miniatura activa
+        let imgs = document.getElementById(mainId).parentElement.querySelectorAll('.gallery img');
+        imgs.forEach(img => img.classList.remove('active'));
+        event.target.classList.add('active');
     }
 </script>
 </head>
@@ -41,68 +45,68 @@
 
 <!-- Villa Moderna -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Villa Moderna">
-<div class="content">
-<h3>Villa Moderna</h3>
-<p>Diseño contemporáneo con jardín privado.</p>
-<p class="price">€450,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('villa-moderna')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Villa Moderna principal"> <!-- villa moderna -->
+    <div class="content">
+        <h3>Villa Moderna</h3>
+        <p>Diseño contemporáneo con jardín y piscina.</p>
+        <p class="price">€450,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('villa-moderna')">Ver propiedad</a>
+    </div>
 </div>
 
 <!-- Residencia Elegante -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Residencia Elegante">
-<div class="content">
-<h3>Residencia Elegante</h3>
-<p>Acabados de lujo en zona exclusiva.</p>
-<p class="price">€990,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('residencia-elegante')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" alt="Residencia Elegante"> <!-- casa lujosa -->
+    <div class="content">
+        <h3>Residencia Elegante</h3>
+        <p>Acabados premium, jardín grande y garaje doble.</p>
+        <p class="price">€990,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('residencia-elegante')">Ver propiedad</a>
+    </div>
 </div>
 
 <!-- Casa de Lujo -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Casa de Lujo">
-<div class="content">
-<h3>Casa de Lujo</h3>
-<p>Piscina y vistas panorámicas.</p>
-<p class="price">€890,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('casa-de-lujo')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Casa de Lujo"> <!-- casa lujo -->
+    <div class="content">
+        <h3>Casa de Lujo</h3>
+        <p>Piscina infinita, terraza panorámica y garaje triple.</p>
+        <p class="price">€890,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('casa-de-lujo')">Ver propiedad</a>
+    </div>
 </div>
 
 <!-- Casa Rústica -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Casa Rústica">
-<div class="content">
-<h3>Casa Rústica</h3>
-<p>Encanto tradicional con jardín amplio.</p>
-<p class="price">€380,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('casa-rustica')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Casa Rústica"> <!-- casa rustica -->
+    <div class="content">
+        <h3>Casa Rústica</h3>
+        <p>Encanto tradicional con jardín amplio.</p>
+        <p class="price">€380,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('casa-rustica')">Ver propiedad</a>
+    </div>
 </div>
 
 <!-- Penthouse Moderno -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Penthouse Moderno">
-<div class="content">
-<h3>Penthouse Moderno</h3>
-<p>Vistas increíbles y diseño minimalista.</p>
-<p class="price">€780,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('penthouse-moderno')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1h_TTvjeEHpwT8" alt="Penthouse Moderno"> <!-- penthouse terraza -->
+    <div class="content">
+        <h3>Penthouse Moderno</h3>
+        <p>Terraza panorámica, estilo urbano contemporáneo.</p>
+        <p class="price">€780,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('penthouse-moderno')">Ver propiedad</a>
+    </div>
 </div>
 
 <!-- Loft Urbano -->
 <div class="property-card">
-<img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" alt="Loft Urbano">
-<div class="content">
-<h3>Loft Urbano</h3>
-<p>Estilo moderno en el corazón de la ciudad.</p>
-<p class="price">€420,000</p>
-<a href="javascript:void(0)" class="btn" onclick="openModal('loft-urbano')">Ver propiedad</a>
-</div>
+    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" alt="Loft Urbano"> <!-- loft urbano -->
+    <div class="content">
+        <h3>Loft Urbano</h3>
+        <p>Estilo moderno en el corazón de la ciudad.</p>
+        <p class="price">€420,000</p>
+        <a href="javascript:void(0)" class="btn" onclick="openModal('loft-urbano')">Ver propiedad</a>
+    </div>
 </div>
 
 </div>
@@ -111,24 +115,24 @@
 <section id="servicios">
 <h2 class="section-title">Nuestros Servicios</h2>
 <p class="about-text">
-Ofrecemos asesoramiento inmobiliario, gestión de propiedades, financiación y diseño de interiores
-para que tu experiencia de compra o alquiler sea única.
+Ofrecemos asesoramiento inmobiliario, gestión de propiedades,
+financiación y diseño de interiores para una experiencia completa.
 </p>
 </section>
 
 <section id="nosotros">
 <h2 class="section-title">Sobre Nosotros</h2>
 <p class="about-text">
-En CASANUOVA PEDRALBES ofrecemos propiedades modernas, elegantes y de alta calidad,
-con un servicio profesional y personalizado.
+En CASANUOVA PEDRALBES ofrecemos propiedades modernas, elegantes
+y de alta calidad, con un servicio profesional y personalizado.
 </p>
 </section>
 
 <section id="testimonios">
 <h2 class="section-title">Testimonios</h2>
 <p class="about-text">
-"Gracias a CASANUOVA PEDRALBES encontramos la casa de nuestros sueños. Atención impecable y opciones excelentes." – María L.<br><br>
-"Profesionales y confiables. Recomendado 100%." – Carlos R.
+"Gracias a CASANUOVA PEDRALBES encontramos la casa de nuestros sueños." – Ana G.<br><br>
+"Servicio impecable y atención personalizada." – José M.
 </p>
 </section>
 
@@ -144,19 +148,55 @@ con un servicio profesional y personalizado.
 <div class="modal-content">
 <span class="close" onclick="closeModal('villa-moderna')">&times;</span>
 <h2>Villa Moderna</h2>
-<img id="villa-main" class="main-img" src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Villa Moderna">
+<img id="villa-main" class="main-img" src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Villa Moderna principal"> <!-- villa moderna principal -->
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" onclick="changeMain('villa-main', this.src)">
-<img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" onclick="changeMain('villa-main', this.src)">
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" onclick="changeMain('villa-main', this.src)" class="active">
+    <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" onclick="changeMain('villa-main', this.src)">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" onclick="changeMain('villa-main', this.src)">
 </div>
-<p>Diseño contemporáneo con jardín privado, piscina y garaje.</p>
+<p>Diseño contemporáneo con jardín, piscina y garaje incluido.</p>
 <ul>
-<li>3 habitaciones</li>
-<li>2 baños</li>
-<li>150m²</li>
-<li>Piscina</li>
-<li>Garaje incluido</li>
+    <li>3 habitaciones</li><li>2 baños</li><li>150m²</li>
+    <li>Piscina</li><li>Jardín</li>
 </ul>
+</div>
+</div>
+
+<!-- Residencia Elegante -->
+<div id="residencia-elegante" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('residencia-elegante')">&times;</span>
+<h2>Residencia Elegante</h2>
+<img id="residencia-main" class="main-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" alt="Residencia Elegante">
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" onclick="changeMain('residencia-main', this.src)" class="active">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" onclick="changeMain('residencia-main', this.src)">
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" onclick="changeMain('residencia-main', this.src)">
+</div>
+<p>Acabados premium en zona exclusiva, garaje doble y amplio jardín.</p>
+<ul><li>4 habitaciones</li><li>3 baños</li><li>200m²</li></ul>
+</div>
+</div>
+
+<!-- Casa de Lujo -->
+<div id="casa-de-lujo" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('casa-de-lujo')">&times;</span>
+<h2>Casa de Lujo</h2>
+<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" class="main-img" alt="Casa de Lujo">
+<p>Piscina infinita, terraza panorámica y garaje triple.</p>
+<ul><li>5 habitaciones</li><li>4 baños</li><li>300m²</li></ul>
+</div>
+</div>
+
+<!-- Casa Rústica -->
+<div id="casa-rustica" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('casa-rustica')">&times;</span>
+<h2>Casa Rústica</h2>
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" class="main-img" alt="Casa Rústica">
+<p>Encanto tradicional con terraza y garaje.</p>
+<ul><li>3 habitaciones</li><li>2 baños</li><li>180m²</li></ul>
 </div>
 </div>
 
@@ -165,78 +205,25 @@ con un servicio profesional y personalizado.
 <div class="modal-content">
 <span class="close" onclick="closeModal('penthouse-moderno')">&times;</span>
 <h2>Penthouse Moderno</h2>
-<img id="penthouse-main" class="main-img" src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Penthouse Moderno">
+<img id="penthouse-main" class="main-img" src="https://images.unsplash.com/photo-TTvjeEHpwT8" alt="Penthouse Moderno"> <!-- penthouse exterior con terraza --> 
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" onclick="changeMain('penthouse-main', this.src)">
-<img src="https://images.unsplash.com/photo-1618221276097-3eb0d3bdb24b" onclick="changeMain('penthouse-main', this.src)">
+    <img src="https://images.unsplash.com/photo-TTvjeEHpwT8" onclick="changeMain('penthouse-main', this.src)" class="active"> 
+    <img src="https://images.unsplash.com/photo-1h_TTvjeEHpwT8" onclick="changeMain('penthouse-main', this.src)"> 
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" onclick="changeMain('penthouse-main', this.src)"> 
 </div>
-<p>Terraza panorámica con diseño minimalista y parking privado.</p>
-<ul>
-<li>3 habitaciones</li>
-<li>2 baños</li>
-<li>220m²</li>
-</ul>
+<p>Terraza panorámica, diseño urbano exclusivo y vistas a la ciudad.</p>
+<ul><li>3 habitaciones</li><li>2 baños</li><li>220m²</li></ul>
 </div>
 </div>
 
-<!-- Resto de modales -->
-<div id="residencia-elegante" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('residencia-elegante')">&times;</span>
-<h2>Residencia Elegante</h2>
-<img id="residencia-main" class="main-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Residencia Elegante">
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" onclick="changeMain('residencia-main', this.src)">
-<img src="https://images.unsplash.com/photo-1580584125789-118c3a0b1713" onclick="changeMain('residencia-main', this.src)">
-</div>
-<p>Acabados de lujo en zona exclusiva con jardín amplio y garaje doble.</p>
-<ul>
-<li>4 habitaciones</li>
-<li>3 baños</li>
-<li>200m²</li>
-</ul>
-</div>
-</div>
-
-<div id="casa-de-lujo" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('casa-de-lujo')">&times;</span>
-<h2>Casa de Lujo</h2>
-<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" class="main-img" alt="Casa de Lujo">
-<p>Piscina infinita, terraza panorámica y garaje triple.</p>
-<ul>
-<li>5 habitaciones</li>
-<li>4 baños</li>
-<li>300m²</li>
-</ul>
-</div>
-</div>
-
-<div id="casa-rustica" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('casa-rustica')">&times;</span>
-<h2>Casa Rústica</h2>
-<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" class="main-img" alt="Casa Rústica">
-<p>Encanto tradicional con terraza y garaje.</p>
-<ul>
-<li>3 habitaciones</li>
-<li>2 baños</li>
-<li>180m²</li>
-</ul>
-</div>
-</div>
-
+<!-- Loft Urbano -->
 <div id="loft-urbano" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('loft-urbano')">&times;</span>
 <h2>Loft Urbano</h2>
 <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" class="main-img" alt="Loft Urbano">
 <p>Estilo moderno en el corazón de la ciudad.</p>
-<ul>
-<li>2 habitaciones</li>
-<li>1 baño</li>
-<li>120m²</li>
-</ul>
+<ul><li>2 habitaciones</li><li>1 baño</li><li>120m²</li></ul>
 </div>
 </div>
 
