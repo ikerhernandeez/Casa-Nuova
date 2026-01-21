@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmobiliaria Dorada</title>
+    <title>CASANUOVA PEDRALBES</title>
     <link rel="stylesheet" href="estilos.css">
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+    </script>
 </head>
 <body>
 
 <header>
-    <h1>Inmobiliaria Dorada</h1>
+    <h1>CASANUOVA PEDRALBES</h1>
     <nav>
         <a href="#">Inicio</a>
         <a href="#propiedades">Propiedades</a>
@@ -26,46 +31,59 @@
     <h2 class="section-title">Propiedades Destacadas</h2>
 
     <div class="properties">
-        <div class="property-card">
+        <div class="property-card" onclick="toggleCard(this)">
             <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="Casa moderna">
             <div class="content">
                 <h3>Villa Moderna</h3>
                 <p>Diseño contemporáneo con jardín privado.</p>
                 <p class="price">$450,000</p>
+                <a href="#" class="btn">Ver propiedad</a>
+                <div class="more-info">
+                    <p>3 habitaciones, 2 baños, 150m², piscina y garaje incluido.</p>
+                </div>
             </div>
         </div>
 
-        <div class="property-card">
+        <div class="property-card" onclick="toggleCard(this)">
             <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Casa elegante">
             <div class="content">
                 <h3>Residencia Elegante</h3>
                 <p>Acabados de lujo en zona exclusiva.</p>
                 <p class="price">$620,000</p>
+                <a href="#" class="btn">Ver propiedad</a>
+                <div class="more-info">
+                    <p>4 habitaciones, 3 baños, 200m², jardín amplio y garaje doble.</p>
+                </div>
             </div>
         </div>
 
-        <div class="property-card">
+        <div class="property-card" onclick="toggleCard(this)">
             <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Casa de lujo">
             <div class="content">
                 <h3>Casa de Lujo</h3>
                 <p>Piscina y vistas panorámicas.</p>
                 <p class="price">$890,000</p>
+                <a href="#" class="btn">Ver propiedad</a>
+                <div class="more-info">
+                    <p>5 habitaciones, 4 baños, 300m², piscina infinita, terraza y garaje triple.</p>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 
 <section id="nosotros">
     <h2 class="section-title">Sobre Nosotros</h2>
     <p class="about-text">
-        En Inmobiliaria Dorada ofrecemos propiedades modernas, elegantes y de alta calidad,
+        En CASANUOVA PEDRALBES ofrecemos propiedades modernas, elegantes y de alta calidad,
         con un servicio profesional y personalizado.
     </p>
 </section>
 
 <footer id="contacto">
-    <p>Contacto: info@inmobiliariadorada.com | Tel: +34 600 000 000</p>
-    <p>&copy; 2026 Inmobiliaria Dorada</p>
+    <p>Contacto: info@casanuovapedralbes.com | Tel: +34 600 000 000</p>
+    <p>&copy; 2026 CASANUOVA PEDRALBES</p>
 </footer>
 
 </body>
