@@ -224,3 +224,27 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.3rem;
+        padding: 10px 16px;
+    }
+
+    .properties {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    .modal .gallery img {
+        width: 50px;
+        height: 40px;
+    }
+}
