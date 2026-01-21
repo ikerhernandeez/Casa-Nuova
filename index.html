@@ -4,192 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inmobiliaria Dorada</title>
-    <style>
-        :root {
-            --blanco: #ffffff;
-            --verde-oliva: #6b8e23;
-            --verde-fuerte: #1f5f3b;
-            --dorado: #c9a24d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background-color: var(--blanco);
-            color: #333;
-        }
-
-        header {
-            background-color: var(--verde-fuerte);
-            padding: 20px;
-            color: var(--blanco);
-        }
-
-        header h1 {
-            color: var(--dorado);
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: var(--blanco);
-            margin-right: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: var(--dorado);
-        }
-
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero h2 {
-            background-color: rgba(31, 95, 59, 0.7);
-            color: var(--blanco);
-            padding: 20px 30px;
-            border-radius: 10px;
-        }
-
-        section {
-            padding: 60px 10%;
-        }
-
-        .section-title {
-            color: var(--verde-oliva);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .properties {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .property-card {
-            border: 2px solid var(--verde-oliva);
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: var(--blanco);
-            transition: transform 0.3s;
-        }
-
-        .property-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .property-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .property-card .content {
-            padding: 20px;
-        }
-
-        .property-card h3 {
-            color: var(--verde-fuerte);
-            margin-bottom: 10px;
-        }
-
-        .price {
-            color: var(--dorado);
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        footer {
-            background-color: var(--verde-fuerte);
-            color: var(--blanco);
-            text-align: center;
-            padding: 30px 10px;
-            margin-top: 40px;
-        }
-
-        footer span {
-            color: var(--dorado);
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>Inmobiliaria Dorada</h1>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#propiedades">Propiedades</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+<header>
+    <h1>Inmobiliaria Dorada</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-    <div class="hero">
-        <h2>Casas modernas y elegantes para tu futuro ideal</h2>
-    </div>
+<section class="hero">
+    <h2>Casas modernas y elegantes para tu futuro ideal</h2>
+</section>
 
-    <section id="propiedades">
-        <h2 class="section-title">Propiedades Destacadas</h2>
-        <div class="properties">
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="Casa moderna">
-                <div class="content">
-                    <h3>Villa Moderna</h3>
-                    <p>Diseño contemporáneo con amplios espacios y jardín privado.</p>
-                    <p class="price">$450,000</p>
-                </div>
-            </div>
+<section id="propiedades">
+    <h2 class="section-title">Propiedades Destacadas</h2>
 
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Casa elegante">
-                <div class="content">
-                    <h3>Residencia Elegante</h3>
-                    <p>Acabados de lujo en una zona exclusiva y tranquila.</p>
-                    <p class="price">$620,000</p>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Casa de lujo">
-                <div class="content">
-                    <h3>Casa de Lujo</h3>
-                    <p>Arquitectura moderna con piscina y vistas panorámicas.</p>
-                    <p class="price">$890,000</p>
-                </div>
+    <div class="properties">
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="Casa moderna">
+            <div class="content">
+                <h3>Villa Moderna</h3>
+                <p>Diseño contemporáneo con jardín privado.</p>
+                <p class="price">$450,000</p>
             </div>
         </div>
-    </section>
 
-    <section id="nosotros">
-        <h2 class="section-title">Sobre Nosotros</h2>
-        <p style="text-align:center; max-width:800px; margin:auto;">
-            En <strong>Inmobiliaria Dorada</strong> nos especializamos en ofrecer propiedades modernas,
-            elegantes y de alta calidad. Nuestro compromiso es ayudarte a encontrar el hogar perfecto
-            con un servicio profesional y personalizado.
-        </p>
-    </section>
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Casa elegante">
+            <div class="content">
+                <h3>Residencia Elegante</h3>
+                <p>Acabados de lujo en zona exclusiva.</p>
+                <p class="price">$620,000</p>
+            </div>
+        </div>
 
-    <footer id="contacto">
-        <p>Contacto: info@inmobiliariadorada.com | Tel: +34 600 000 000</p>
-        <p>&copy; 2026 <span>Inmobiliaria Dorada</span>. Todos los derechos reservados.</p>
-    </footer>
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Casa de lujo">
+            <div class="content">
+                <h3>Casa de Lujo</h3>
+                <p>Piscina y vistas panorámicas.</p>
+                <p class="price">$890,000</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nosotros">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <p class="about-text">
+        En Inmobiliaria Dorada ofrecemos propiedades modernas, elegantes y de alta calidad,
+        con un servicio profesional y personalizado.
+    </p>
+</section>
+
+<footer id="contacto">
+    <p>Contacto: info@inmobiliariadorada.com | Tel: +34 600 000 000</p>
+    <p>&copy; 2026 Inmobiliaria Dorada</p>
+</footer>
 
 </body>
 </html>
